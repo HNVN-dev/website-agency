@@ -6,12 +6,12 @@
   --colorLight: #f9f9f9;
 }
 
-
-*, html {
+*,
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;;
+  font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -29,6 +29,7 @@ FlEX NAV DESKTOP BEGIN */
 header {
   display: flex;
   position: fixed;
+  z-index: 9;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
@@ -132,13 +133,12 @@ Here I hide the first one for desktop */
 /* -------------------------------Media query for flex nav start here */
 
 @media only screen and (max-width: 1100px) {
-
-/* disable the desktop nightmod button */
+  /* disable the desktop nightmod button */
 
   nav + button {
     display: none;
   }
-  
+
   /* setup the night mod button for the mobile menu */
 
   .nav__links button {
@@ -152,24 +152,22 @@ Here I hide the first one for desktop */
     margin-top: 10px;
   }
 
-
   .nav__links button:hover {
     border-radius: 50px;
     color: var(--colorLight);
     background-color: var(--colorDark);
   }
-  
 
   #menu-burger {
     display: flex;
   }
-  
-/* Here we can modify the mobile menu */
+
+  /* Here we can modify the mobile menu */
 
   .nav__links {
     display: block;
     position: fixed;
-    z-index: 9;
+    z-index: 99999;
     right: -100%;
     top: 105px;
     width: 100%;
@@ -178,7 +176,6 @@ Here I hide the first one for desktop */
     transition: 0.3s ease;
     transform-origin: right;
   }
-
 
   .nav__links.show {
     right: 0;
@@ -202,8 +199,124 @@ Here I hide the first one for desktop */
     color: var(--mainColor);
     opacity: 1;
   }
+}
 
+@media only screen and (max-width: 506px) {
+  .logo {
+    font-size: 1.3rem;
+  }
 }
 
 /* -------------------------------FLEX NAV MOBILE END
-FIRST SECTION BEGIN */
+FIRST SECTION DESKTOP BEGIN */
+
+.first-section {
+  position: relative;
+  margin: 0 auto;
+  height: 50vh;
+  width: 100%;
+  background-color: var(--mainColor);
+  color: var(--colorLight);
+  z-index: 2;
+}
+
+.first-section-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.hook-p,
+.CTA-freecourse {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  z-index: 9;
+}
+
+.little-p {
+  font-size: 1rem;
+}
+
+.CTA-freecourse {
+  padding: 25px 50px;
+  background: none;
+  border: 2px solid var(--colorLight);
+  color: var(--colorLight);
+}
+
+.CTA-freecourse:hover {
+  background: var(--colorLight);
+  color: var(--mainColor);
+  border: none;
+}
+
+/* ------------------------------- FIRST SECTION DESKTOP END
+FIRST SECTION MOBILE BEGIN */
+
+@media only screen and (max-width: 988px) {
+  .first-section-container {
+    top: 40%;
+    transform: translate(-50%);
+  }
+
+  .hook-p,
+  .CTA-freecourse {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 794px) {
+  .hook-p,
+  .CTA-freecourse {
+    font-size: 1.2rem;
+  }
+
+  .little-p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 506px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .hook-p {
+    font-size: 1.1rem;
+  }
+
+  .little-p {
+    font-size: 1rem;
+  }
+
+  .CTA-freecourse {
+    padding: 15px 30px;
+  }
+}
+
+@media only screen and (max-width: 387px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .hook-p {
+    font-size: 0.9rem;
+  }
+
+  .little-p {
+    font-size: 0.8rem;
+  }
+
+  .CTA-freecourse {
+    font-size: 0.9rem;
+  }
+}
+
+/* ------------------------------- FIRST SECTION MOBILE END
+SECOND SECTION BEGIN*/
