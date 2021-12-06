@@ -23,19 +23,36 @@ button {
   transition: 0.3s ease 0s;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.7rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
 /* -------------------------------GENERAL SETTINGS & RESET END
 FlEX NAV DESKTOP BEGIN */
 
 header {
   display: flex;
   position: fixed;
-  z-index: 9;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  z-index: 9;
   width: 100%;
+  padding: 20px 10%;
   background-color: var(--mainColor);
   color: var(--colorLight);
+  box-shadow: 0px 8px 14px -7px rgba(0, 0, 0, 0.51);
 }
 
 .logo {
@@ -46,7 +63,6 @@ header {
 }
 
 .nav__links {
-  list-style: none;
   display: flex;
 }
 
@@ -229,10 +245,6 @@ FIRST SECTION DESKTOP BEGIN */
   text-align: center;
 }
 
-h1 {
-  font-size: 2.2rem;
-}
-
 .hook-p,
 .CTA-freecourse {
   font-size: 1.5rem;
@@ -261,17 +273,16 @@ h1 {
 FIRST SECTION MOBILE BEGIN */
 
 @media only screen and (max-width: 988px) {
-  .first-section-container {
-    top: 40%;
-    transform: translate(-50%);
-  }
-
   .hook-p,
   .CTA-freecourse {
     font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 794px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
   .hook-p,
   .CTA-freecourse {
     font-size: 1.2rem;
@@ -282,9 +293,9 @@ FIRST SECTION MOBILE BEGIN */
   }
 }
 
-@media only screen and (max-width: 506px) {
+@media only screen and (max-width: 539px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .hook-p {
@@ -319,4 +330,143 @@ FIRST SECTION MOBILE BEGIN */
 }
 
 /* ------------------------------- FIRST SECTION MOBILE END
+DIVIDER WAVES */
+
+svg {
+  height: 20%;
+}
+
+/* ------------------------------- FIRST SECTION DIVIDER
 SECOND SECTION BEGIN*/
+
+.second-section {
+  height: 100vh;
+}
+
+.intro-courses-container {
+  text-align: right;
+  margin: 0 15% 5% 0;
+}
+
+.intro-courses-container h2 {
+  color: var(--mainColor);
+}
+
+/* course boxes start here */
+
+.premium-courses-container {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.course-box {
+  text-align: center;
+  padding: 60px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px -1px #000000;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.36);
+}
+
+.course-box:nth-child(1) {
+  background-color: #ffff00;
+}
+.course-box:nth-child(2) {
+  background-color: #5ad2f0;
+  color: var(--colorLight);
+}
+.course-box:nth-child(3) {
+  background-color: var(--mainColor);
+  color: var(--colorLight);
+}
+
+.course-box h3 {
+  margin-bottom: 30px;
+}
+
+
+
+.course-box li {
+  margin: 20px 0;
+}
+
+.course-price {
+  margin: 10px 0;
+  font-size: 1.7rem;
+}
+
+.course-box button {
+  width: 100%;
+  height: 40px;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.course-box:nth-child(1) button {
+  border: 2px solid black;
+}
+
+.course-box:nth-child(2) button,
+.course-box:nth-child(3) button {
+  border: 2px solid var(--colorLight);
+  color: var(--colorLight);
+}
+
+.course-box button:hover {
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.36);
+  font-weight: 900;
+}
+
+.course-box:nth-child(1) button:hover {
+  background-color: var(--colorDark);
+  color: var(--colorLight);
+}
+
+.course-box:nth-child(2) button:hover {
+  background-color: var(--colorLight);
+  color: #61dbfb;
+}
+
+.course-box:nth-child(3) button:hover {
+  background-color: var(--colorLight);
+  color: var(--mainColor);
+}
+
+/* ------------------------------- SECOND SECTION DESKTOP END
+SECOND SECTION MOBILE START */
+
+@media only screen and (max-width: 1232px) {
+  .intro-courses-container {
+    text-align: center;
+    margin: 0 0 30px;
+  }
+
+  .premium-courses-container {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.7rem;
+  }
+
+  .course-box + .course-box {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 677px) {
+  .premium-courses-container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .premium-courses-container {
+    font-size: 1.3rem;
+    width: 90%;
+  }
+
+  .intro-courses-container h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ------------------------------- SECOND SECTION MOBILE END 
+THIRD SECTION START */
